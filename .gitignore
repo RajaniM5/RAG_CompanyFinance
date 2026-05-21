@@ -1,0 +1,23 @@
+# Environment & secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Vector store (large binary files)
+vectorstore/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
