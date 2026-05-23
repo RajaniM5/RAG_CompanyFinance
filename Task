@@ -1,0 +1,73 @@
+Phase 3 — Retrieval Chain
+
+Task 9 — src/retriver.py
+
+Wrap ChromaDB as a LangChain retriever (as_retriever)
+Set k=5 (top 5 results per query)
+Support optional metadata filtering by segment, country, year
+Task 10 — src/chain.py — Prompt template
+
+Write a finance-specific system prompt telling the LLM it's a financial analyst assistant
+Inject {context} (retrieved docs) and {question} placeholders
+
+Task 11 — src/chain.py — RAG chain
+
+Choose an LLM — Ollama (free/local) or OpenAI GPT-4o-mini (API key)
+Wire retriever + prompt + LLM into a create_retrieval_chain
+
+Task 12 — src/chain.py — Conversation memory
+
+Add ConversationBufferMemory so employees can ask follow-up questions
+Phase 4 — Testing (src/chain.py)
+Task 13 — Test queries
+
+Run questions like:
+"Which country had the highest profit in 2014?"
+"Compare Government vs Midmarket segment sales"
+"What was the total revenue for Germany?"
+
+Task 14 — Evaluate retrieval quality
+
+Check that retrieved chunks are relevant to the query
+Tune k if answers are missing data
+
+Phase 5 — Interface (app/main.py)
+Task 15 — CLI chat loop
+
+Interactive terminal Q&A loop for employees
+Shows answer + source documents used
+Task 16 — requirements.txt update
+
+Add LLM dependency (ollama or langchain-openai) once LLM is chosen Make sure you're on main first:
+
+
+git checkout main
+Task 9 — Retriever:
+
+
+git checkout -b task/9-retriever
+Task 10 — Prompt template:
+
+
+git checkout -b task/10-prompt-template
+Task 11 — RAG chain + LLM:
+
+
+git checkout -b task/11-rag-chain
+Task 12 — Conversation memory:
+
+
+git checkout -b task/12-conversation-memory
+Task 13 — Test queries:
+
+
+git checkout -b task/13-test-queries
+Task 14 — Retrieval evaluation:
+
+
+git checkout -b task/14-retrieval-evaluation
+Task 15 — CLI chat interface:
+
+
+git checkout -b task/15-cli-chat
+Workflow for each task going forward:
